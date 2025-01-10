@@ -5,7 +5,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Todo = ({ task, deleteTodo,toggleComplete,editTodo }) => {
   return (
-    <div className="Todo">
+    <div key={task.id} className="Todo">
       <p className={task.completed ? "completed" : "incompleted"} onClick={()=> toggleComplete(task.id)}>
         {task.task}
       </p>
